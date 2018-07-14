@@ -1,0 +1,18 @@
+#计算规则：
+0.假设要求实数x的平方根，任取y为某个实数值
+1.如果y*y=x,计算结束，y就是x的平方根
+2.令z=(y+x/y)/2
+3.令y的新值为z，转回步骤1
+
+
+x = float(input("Square root for:"))
+
+guess = 1.0
+n = 0
+
+while abs(guess * guess - x) > 1e-8
+    guess = (guess + x/guess)/2
+    n = n + 1
+    print(n, guess)
+    
+print(guess)
