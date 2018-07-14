@@ -24,4 +24,18 @@ while n >= 0:
 print("Bye!")
 
 
+#通过函数计算阶乘
 
+def fact(n):
+    prod = 1
+    for k in range(2, n+1):
+        prod = prod * k
+    return prod
+    
+while True:
+    n = int(input("Factorial for:"))
+    if n < 0:
+        break
+    print("Factorial of", n, "is", fact(n))
+    
+print("Bye!")
