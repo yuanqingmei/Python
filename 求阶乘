@@ -4,3 +4,24 @@ for i in range (2, n+1):
     prod = prod * i
 
 print("The factorial of", n, "is", prod)
+
+
+
+#任意次接受输入并计算阶乘值，直至用户希望结束为止。
+
+print("This is a factorial calculator. -1 to stop.")
+n = int(input("Factorial for:"))
+
+while n >= 0:
+    prod = 1
+    for i in range(2, n+1):
+        prod = prod * i
+        
+    print("The factorial of", n, "is", prod)
+    
+    n = int(input("Factorial for:"))
+    
+print("Bye!")
+
+
+
