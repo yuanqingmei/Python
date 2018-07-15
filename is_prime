@@ -7,3 +7,6 @@ def is_prime(n)
             return False
         k += 1
     return Ture
+
+
+#查一下2002年印度科学家提出的AKS算法
