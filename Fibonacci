@@ -1,0 +1,50 @@
+from time import time
+
+def fib(n):
+    if n < 1:
+        return 0
+    if n == 1:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+def test_fib(n):
+    t = time()
+    f = fib(n)
+    print ("Fib[" + str(n) + "] = ", f, "Timing :", str(time() - t) + "s\n")
+    
+def test_fibs(m, n):
+    for k in range(m,n):
+        test_fib(k)
+        
+print(test_fibs(32,40))
+
+#Fibonacci数列的迭代计算
+def fib(n):
+    if n < 0:
+        return 0
+    f1, f2 = 0, 1     #开始时分别表示F_0和F_1
+    k = 0
+    while k < n:
+        f1, f2 = f2, f2 + f1
+        k += 1
+    return f1
+    
+
+#Fibonacci数列另一个递归定义（1）
+def fib0(f1, f2, k, n):
+    if k > n:
+        return f1
+    else:
+        return fib0(f2, f1 + f2, k + 1, n)
+ 
+ def fib(n):
+     return fib0(0, 1, 1, n)
+ 
+
+
+#Fibonacci数列另一个递归定义（2）
+def fib(n):
+    f1, f2 = 0, 1
+    for k in range(n):
+        f1, f2 = f2, f2 + f1
+    retrun f1
