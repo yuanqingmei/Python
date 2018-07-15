@@ -10,9 +10,22 @@ x = float(input("Square root for:"))
 guess = 1.0
 n = 0
 
-while abs(guess * guess - x) > 1e-8
+while abs(guess * guess - x) > 1e-8:
     guess = (guess + x/guess)/2
     n = n + 1
     print(n, guess)
     
 print(guess)
+
+
+#函数
+
+def sqrt(x):
+    guess = 1.0
+    n = 0
+
+    while abs(guess * guess - x) > 1e-8:
+        guess = (guess + x/guess)/2
+        n = n + 1
+        print(str(n), + "th iteration:" + guess)
+    return guess
