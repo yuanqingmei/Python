@@ -27,7 +27,7 @@ def fib(n):
     while k < n:
         f1, f2 = f2, f2 + f1
         k += 1
-    return
+    return f1
     
 
 #Fibonacci数列另一个递归定义（1）
