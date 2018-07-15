@@ -20,7 +20,7 @@ print(test_fibs(32,40))
 
 #Fibonacci数列的迭代计算
 def fib(n):
-    if n < 0
+    if n < 0:
         return 0
     f1, f2 = 0, 1     #开始时分别表示F_0和F_1
     k = 0
