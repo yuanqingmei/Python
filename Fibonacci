@@ -13,7 +13,7 @@ def test_fib(n):
     print ("Fib[" + str(n) + "] = ", f, "Timing :", str(time() - t) + "s\n")
     
 def test_fibs(m, n):
-    for k in range（m, n):
+    for k in range(m,n):
         test_fib(k)
         
 print(test_fibs(32,40))
