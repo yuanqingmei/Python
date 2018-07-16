@@ -1,0 +1,12 @@
+def moveone(sfrom, sto):
+    print("Move a disk from", sfrom, "to", sto)
+    
+def henoi(n, sfrom, sto, sby):
+    if n == 1:
+        moveone(sfrom, sto)
+        return
+    henoi(n - 1, sfrom, sby, sto)
+    moveone(sfrom, sto)
+    henoi(n - 1, sby, sto, sfrom)
+    
+henoi(3, "A", "B", "C")
