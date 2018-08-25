@@ -23,3 +23,39 @@ f.readlines()与read类似，也是一次读入整个文件的内容，但它返
 
 需要注意read, 它将创建一个包含整个文件内容的字符串，如果文件很大，这个串就很长。
 
+存在以下几种给当前名字空间中引进新定义的情况：
+1.给没有定义的变量赋值，就是明确地把这个变量加入当前名字空间
+2.用def定义函数，解释器将基于函数定义构造出一个函数对象，并将其关联于def语句中给定的函数名；
+3.函数的参数了给函数执行时建立的局部名字空间引进新的定义；
+4.用import语句导入模块，可以引入一个或多个定义。
+5.把for语句头部看作给循环变量赋值，在for语句执行中，该变量可能经历一系列值。for语句结束后该变量仍然存在，并保持当时的关联值。此后这个变量可以像具有
+同样作用域的其他哟几个个样使用。
+
+求立方根的函数
+def cbrt(x)
+    if x == 0.0:
+        return 0.0
+    x1 = x
+    while True:
+        x2 = (2.0 * x1 + x / x1 / x1) / 3
+        if abs((x2 - x1） / x1) < 0.001:
+            return x2
+        x1 = x2
+        
+ 定义两个辅助函数来实现立方根函数
+ def improve(x, guess):
+     return (2.0 * guess + x / guess / guess) / 3
+ 
+ def accept(guess, tmp)
+     return abs((tmp - guess） / guess) < 1E-6
+ 
+ def cbrt(x)
+    if x == 0.0:
+        return 0.0
+    guess = x
+    while True:
+        tmp = improve(x, guess)
+        if accept(guess, tmp):
+            return tmp
+        guess = tmp  
+     
