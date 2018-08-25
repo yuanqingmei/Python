@@ -43,13 +43,13 @@ def cbrt(x)
         x1 = x2
         
  定义两个辅助函数来实现立方根函数
- def improve(x, guess):
-     return (2.0 * guess + x / guess / guess) / 3
- 
- def accept(guess, tmp)
-     return abs((tmp - guess） / guess) < 1E-6
- 
  def cbrt(x)
+    def improve(x, guess):
+        return (2.0 * guess + x / guess / guess) / 3
+ 
+    def accept(guess, tmp)
+        return abs((tmp - guess） / guess) < 1E-6
+ 
     if x == 0.0:
         return 0.0
     guess = x
