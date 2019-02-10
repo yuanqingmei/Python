@@ -1,4 +1,7 @@
 Using both Python 2 and 3 in Windows
+
+This article comes from https://spapas.github.io/2017/12/20/python-2-3-windows/.
+
 ΤΕΤ 20 ΔΕΚΈΜΒΡΙΟΣ 2017
 The release of Django 2.0 was a milestone in the history of Python since it completely dropped support for Python 2.x. I am a long time user of Django and, loyal to the philosophy of “if it is working don’t change” I was always using Python 2.x.
 
