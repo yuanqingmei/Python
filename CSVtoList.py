@@ -1,9 +1,6 @@
+# encoding:utf-8
 import os
 
-#workingDirectory = "D:\\exercise\\python\\(ok)1. Aarti IJSAEM 2017\\(final)data"
-#workingDirectory = "D:\\exercise\python\\(ok)13. Cao ICRSE 2015\\(final)data"
-#workingDirectory = "D:\\exercise\python\\(ok)14. Catal TJEECS 2016\\(final)data"
-#workingDirectory = "D:\\exercise\\python\\(ok)35. Herbold TSE 2017\\(final)data"
 workingDirectory = "E:\\gittorrent\\mysql-2019-06-01\\mysql-2019-06-01"
 fileName = "\\List.txt"
 
@@ -13,7 +10,7 @@ root = os.getcwd()
 print(root)
 
 def file_name(file_dir):
-#    line = 0
+#      line = 0
     for root, dirs, files in os.walk(file_dir):
 #        print(line)
 #        line = line + 1
