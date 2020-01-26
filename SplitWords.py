@@ -2,7 +2,7 @@
 '''
 __author__ = 'Yuanqing Mei'
 __email__ = 'dg1533019@smail.nju.edu.cn'
-__file__ = SplitWords.py.py
+__file__ = SplitWords.py
 __time__ = 2020/1/26 18:30
 __description__ = '统计词频'
 '''
