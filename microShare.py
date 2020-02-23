@@ -12,7 +12,7 @@ import tushare as ts
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import numpy as np
 
 pd.set_option("expand_frame_repr", False)       # 当列太多时不换行
 plt.rcParams['font.sans-serif'] = ['SimHei']    # 用来正常显示中文标签
@@ -24,7 +24,7 @@ pro = ts.pro_api()
 
 
 # 导入000002.SZ前复权日线行情数据，保留收盘价列
-df = ts.pro_bar(ts_code='000002.SZ', adj='qfq', start_date='20190101', end_date='20190930')
+df = ts.pro_bar(ts_code='000002.SZ', adj='qfq', start_date='20150101', end_date='20200221')
 df.sort_values('trade_date', inplace=True)
 df['trade_date'] = pd.to_datetime(df['trade_date'])
 df.set_index('trade_date', inplace=True)
@@ -82,6 +82,10 @@ print("Prediction: {}".format(new_prediction))
 # 测算模型的表现：预测对的个数 / 总个数
 print(knn.score(X_test, y_test))
 
+print("the format of X is ", repr(X_test))
+x_predict = [[0, 0]]
+# x_predict = np.array([0, 0])
+print("000002.SZ stock' price for 20200224 is", knn.predict(x_predict))
 
 import numpy as np
 
